@@ -1,0 +1,43 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "torres-developer/polyglot",
+    "description": "An library that gives an interface to easily use the LibreTranslate web service.",
+    "type": "library",
+    "keywords": [
+        "translation",
+        "argos-translate",
+        "LibreTranslate"
+    ],
+    "homepage": "https://github.com/torres-developer/polyglot",
+    "readme": "./README.md",
+    "time": "2023-01-28",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "torres-developer",
+            "email": "torres.dev@disroot.org",
+            "homepage": "https://github.com/torres-developer",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/torres-developer/polyglot/issues",
+        "source": "https://github.com/torres-developer/polyglot/"
+    },
+    "require": {
+        "php": ">=8.1.14",
+        "pds/skeleton": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TorresDeveloper\\Polyglot\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/torres-developer/polyglot"
+        }
+    ]
+}
