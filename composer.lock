@@ -216,12 +216,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/torres-developer/php-pull.git",
-                "reference": "93b55aa9f2dbe92707c43b36ee40599205afbad1"
+                "reference": "6c21ceb6b352ceb6c4446b0689c8394d02c88257"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/torres-developer/php-pull/zipball/93b55aa9f2dbe92707c43b36ee40599205afbad1",
-                "reference": "93b55aa9f2dbe92707c43b36ee40599205afbad1",
+                "url": "https://api.github.com/repos/torres-developer/php-pull/zipball/6c21ceb6b352ceb6c4446b0689c8394d02c88257",
+                "reference": "6c21ceb6b352ceb6c4446b0689c8394d02c88257",
                 "shasum": ""
             },
             "require": {
