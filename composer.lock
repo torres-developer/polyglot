@@ -48,17 +48,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "5a4f141ac2e5bc35e615134f127e1833158d2944"
+                "reference": "6d70f402f0eddb2b154b22950b5381bbf5b28469"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/5a4f141ac2e5bc35e615134f127e1833158d2944",
-                "reference": "5a4f141ac2e5bc35e615134f127e1833158d2944",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/6d70f402f0eddb2b154b22950b5381bbf5b28469",
+                "reference": "6d70f402f0eddb2b154b22950b5381bbf5b28469",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0.0",
-                "psr/http-message": "^1.0"
+                "psr/http-message": "^1.0 || ^2.0"
             },
             "default-branch": true,
             "type": "library",
@@ -82,7 +82,7 @@
                     "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "description": "PSR-17: Common interfaces for PSR-7 HTTP message factories",
             "keywords": [
                 "factory",
                 "http",
@@ -96,30 +96,29 @@
             "support": {
                 "source": "https://github.com/php-fig/http-factory/tree/master"
             },
-            "time": "2022-07-14T07:21:53+00:00"
+            "time": "2023-05-17T18:32:11+00:00"
         },
         {
             "name": "psr/http-message",
-            "version": "dev-master",
+            "version": "1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
-                "reference": "efd67d1dc14a7ef4fc4e518e7dee91c271d524e4"
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/efd67d1dc14a7ef4fc4e518e7dee91c271d524e4",
-                "reference": "efd67d1dc14a7ef4fc4e518e7dee91c271d524e4",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": "^7.2 || ^8.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -148,9 +147,9 @@
                 "response"
             ],
             "support": {
-                "source": "https://github.com/php-fig/http-message/tree/master"
+                "source": "https://github.com/php-fig/http-message/tree/1.1"
             },
-            "time": "2019-08-29T13:16:46+00:00"
+            "time": "2023-04-04T09:50:52+00:00"
         },
         {
             "name": "torres-developer/http-message-impl",
@@ -158,19 +157,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/torres-developer/http-message-impl.git",
-                "reference": "1289727554e834f6b67a2f8b02c4e0364b15457e"
+                "reference": "6cc80e7dbc3ca16acef3df81d2fdb63fcc0160e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/torres-developer/http-message-impl/zipball/1289727554e834f6b67a2f8b02c4e0364b15457e",
-                "reference": "1289727554e834f6b67a2f8b02c4e0364b15457e",
+                "url": "https://api.github.com/repos/torres-developer/http-message-impl/zipball/6cc80e7dbc3ca16acef3df81d2fdb63fcc0160e1",
+                "reference": "6cc80e7dbc3ca16acef3df81d2fdb63fcc0160e1",
                 "shasum": ""
             },
             "require": {
                 "pds/skeleton": "^1.0",
-                "php": ">=8.1.13",
+                "php": ">=8.1.7",
                 "psr/http-factory": "^1.0@dev",
-                "psr/http-message": "1.0.x-dev"
+                "psr/http-message": "^1.0@dev"
+            },
+            "provide": {
+                "psr/http-factory-implementation": "^1.0@dev",
+                "psr/http-message-implementation": "^1.0@dev"
             },
             "default-branch": true,
             "type": "library",
@@ -192,18 +195,20 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Implemantation of the psr-7",
+            "description": "Implemantation of the psr-7, psr-17",
             "homepage": "https://github.com/torres-developer/http-message-impl",
             "keywords": [
                 "implemantation",
                 "psr",
+                "psr-17",
                 "psr-7"
             ],
             "support": {
+                "docs": "https://www.php-fig.org/psr/",
                 "issues": "https://github.com/torres-developer/http-message-impl/issues",
                 "source": "https://github.com/torres-developer/http-message-impl/"
             },
-            "time": "2023-01-07T00:00:00+00:00"
+            "time": "2023-01-29T00:00:00+00:00"
         },
         {
             "name": "torres-developer/pull",
@@ -211,18 +216,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/torres-developer/php-pull.git",
-                "reference": "640256234e0149ab3b93f0420d680916b2406f49"
+                "reference": "93b55aa9f2dbe92707c43b36ee40599205afbad1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/torres-developer/php-pull/zipball/640256234e0149ab3b93f0420d680916b2406f49",
-                "reference": "640256234e0149ab3b93f0420d680916b2406f49",
+                "url": "https://api.github.com/repos/torres-developer/php-pull/zipball/93b55aa9f2dbe92707c43b36ee40599205afbad1",
+                "reference": "93b55aa9f2dbe92707c43b36ee40599205afbad1",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "pds/skeleton": "^1.0",
-                "php": ">=8.1.13",
+                "php": ">=8.1.7",
                 "torres-developer/http-message-impl": "dev-master"
             },
             "default-branch": true,

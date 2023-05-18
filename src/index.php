@@ -10,8 +10,8 @@ $from = new Lang("pt");
 $to = new Lang("en");
 
 $t = new Translator(new URI("http://127.0.0.1:5000"));
-$t->setNative($from);
-var_dump($t->translate(
+//$t->setNative($from);
+var_dump($t->translateDetected(
     "Boas pessoal vocês sabem quem fala, "
         . "daqui é o Tiagovski a rebentar a escala.",
     $to

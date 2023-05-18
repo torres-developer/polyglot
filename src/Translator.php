@@ -11,6 +11,7 @@ class Translator
 {
     private const LANGUAGES = "/languages";
     private const TRANSLATE = "/translate";
+    private const DETECT = "/detect";
 
     private UriInterface $ws;
     private ?Lang $native;
@@ -34,17 +35,20 @@ class Translator
         return $this->langs;
     }
 
-    public function translate(string $text, Lang $to): string
-    {
-        $this->native = $this->langs->getVertix($this->native);
+    public function translate(
+        string $text,
+        Lang $to,
+        ?Lang $from = null
+    ): string {
+        $native = $this->langs->getVertix($from ?? $this->native);
 
-        $path = $this->native->shortPathTo($to);
+        $path = $native->shortPathTo($to);
 
-        $last = $this->native;
+        $last = $native;
 
         /** @var Lang $lang */
         foreach ($path as $lang) {
-            if ($lang == $this->native) {
+            if ($lang == $native) {
                 continue;
             }
 
@@ -62,6 +66,17 @@ class Translator
         return $text;
     }
 
+    public function translateDetected(string $text, Lang $to): string
+    {
+        return $this->translate($text, $to, $this->detectLang($text));
+    }
+
+    public function detectLang(string $text): Lang
+    {
+        $body = $this->post(self::DETECT, ["q" => $text,]);
+        return new Lang($body[0]["language"]);
+    }
+
     public function getNative(): Lang
     {
         return $this->native;
@@ -77,16 +92,21 @@ class Translator
         return json_decode(pull(
             $this->ws->withPath($path),
             HTTPVerb::POST,
-            http_build_query($formData),
+            $formData,
             ["Content-Type" => "multipart/form-data"]
-        ), true);
+        )->getBody()->getContents(), true);
     }
 
     private function createGraph(): void
     {
         $this->langs = new LangsGraph();
 
-        $langs = json_decode(pull($this->ws->withPath(self::LANGUAGES)), true);
+        $langs = json_decode(
+            pull($this->ws->withPath(self::LANGUAGES))
+                ->getBody()
+                ->getContents(),
+            true
+        );
 
         $this->langs->addVertix(...array_map(
             self::parseLang(...),
