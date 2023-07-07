@@ -8,12 +8,17 @@ class LangsGraph
      * @var Lang[] $vertices
      */
     private array $vertices = [];
+    /**
+     * @var string[] $codes
+     */
+    private array $codes = [];
 
     public function addVertix(Lang ...$langs): void
     {
         foreach ($langs as $lang) {
             if (!isset($this->vertices[$lang->getCode()])) {
                 $this->vertices[$lang->getCode()] = $lang;
+                $this->codes[] = $lang->getCode();
             }
         }
     }
@@ -30,5 +35,12 @@ class LangsGraph
     public function getVertix(Lang $lang): ?Lang
     {
         return $this->vertices[$lang->getCode()] ?? null;
+    }
+
+    /**
+        @return string[]
+    */
+    public function getVertexesCodes(): array {
+        return $this->codes;
     }
 }
