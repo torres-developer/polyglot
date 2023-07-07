@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c28802311865d046844e21957ecf738",
+    "content-hash": "41011d9f3b1e8e525dc9df5c35f1296f",
     "packages": [
         {
             "name": "pds/skeleton",
@@ -157,17 +157,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/torres-developer/http-message-impl.git",
-                "reference": "6cc80e7dbc3ca16acef3df81d2fdb63fcc0160e1"
+                "reference": "7ce9610720640e7ea70e88c055f9e87cb30ce7e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/torres-developer/http-message-impl/zipball/6cc80e7dbc3ca16acef3df81d2fdb63fcc0160e1",
-                "reference": "6cc80e7dbc3ca16acef3df81d2fdb63fcc0160e1",
+                "url": "https://api.github.com/repos/torres-developer/http-message-impl/zipball/7ce9610720640e7ea70e88c055f9e87cb30ce7e3",
+                "reference": "7ce9610720640e7ea70e88c055f9e87cb30ce7e3",
                 "shasum": ""
             },
             "require": {
                 "pds/skeleton": "^1.0",
-                "php": ">=8.1.7",
+                "php": ">=8.1.6",
                 "psr/http-factory": "^1.0@dev",
                 "psr/http-message": "^1.0@dev"
             },
@@ -216,18 +216,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/torres-developer/php-pull.git",
-                "reference": "6c21ceb6b352ceb6c4446b0689c8394d02c88257"
+                "reference": "4667aac5e79a052fa26ecb2c47b41fac9ebb3786"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/torres-developer/php-pull/zipball/6c21ceb6b352ceb6c4446b0689c8394d02c88257",
-                "reference": "6c21ceb6b352ceb6c4446b0689c8394d02c88257",
+                "url": "https://api.github.com/repos/torres-developer/php-pull/zipball/4667aac5e79a052fa26ecb2c47b41fac9ebb3786",
+                "reference": "4667aac5e79a052fa26ecb2c47b41fac9ebb3786",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "pds/skeleton": "^1.0",
-                "php": ">=8.1.7",
+                "php": ">=8.1.6",
                 "torres-developer/http-message-impl": "dev-master"
             },
             "default-branch": true,
@@ -275,7 +275,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=8.1.13"
+        "php": ">=8.1.6"
     },
     "platform-dev": [],
     "plugin-api-version": "2.3.0"

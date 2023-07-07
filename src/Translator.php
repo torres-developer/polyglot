@@ -94,7 +94,7 @@ class Translator
             HTTPVerb::POST,
             $formData,
             ["Content-Type" => "multipart/form-data"]
-        )->getBody()->getContents(), true);
+        )->response()->getBody()->getContents(), true);
     }
 
     private function createGraph(): void
@@ -103,6 +103,7 @@ class Translator
 
         $langs = json_decode(
             pull($this->ws->withPath(self::LANGUAGES))
+                ->response()
                 ->getBody()
                 ->getContents(),
             true
